@@ -301,13 +301,10 @@ def levels(char_class, char_level):
         feature_display = '\n'.join(feature_display)
     else:
         feature_display = ''
-    print('class_specific' in level_data)
     if 'class_specific' in level_data:
         class_specific_info = level_data['class_specific']
         class_specific_columns = class_specific_info.keys()
         class_specific_data = [[class_specific_info[x] for x in class_specific_info.keys()]]
-        print(class_specific_columns)
-        print(class_specific_data)
         class_specific_display = '\n'.join(['Class Specific:', get_table_data(class_specific_data, class_specific_columns)])
     else:
         class_specific_display = ''
